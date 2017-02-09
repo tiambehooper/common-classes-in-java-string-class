@@ -2,6 +2,7 @@ package com.theironyard;
 
 import net.doughughes.testifier.exception.CannotAccessMethodException;
 import net.doughughes.testifier.exception.CannotFindMethodException;
+import net.doughughes.testifier.exception.CannotInvokeMethodException;
 import net.doughughes.testifier.test.TestifierTest;
 import net.doughughes.testifier.util.Invoker;
 import org.junit.Test;
@@ -25,7 +26,7 @@ public class StringKatasTest extends TestifierTest {
         String result = null;
         try {
             result = (String) Invoker.invokeStatic(StringKatas.class, "helloName", name);
-        } catch (CannotFindMethodException | CannotAccessMethodException e) {
+        } catch (CannotInvokeMethodException | CannotFindMethodException | CannotAccessMethodException e) {
             fail(e.getMessage());
         }
 
@@ -58,7 +59,7 @@ public class StringKatasTest extends TestifierTest {
         String result = null;
         try {
             result = (String) Invoker.invokeStatic(StringKatas.class, "makeOutWord", out, word);
-        } catch (CannotFindMethodException | CannotAccessMethodException e) {
+        } catch (CannotInvokeMethodException | CannotFindMethodException | CannotAccessMethodException e) {
             fail(e.getMessage());
         }
 
@@ -86,7 +87,7 @@ public class StringKatasTest extends TestifierTest {
         String result = null;
         try {
             result = (String) Invoker.invokeStatic(StringKatas.class, "firstHalf", str);
-        } catch (CannotFindMethodException | CannotAccessMethodException e) {
+        } catch (CannotInvokeMethodException | CannotFindMethodException | CannotAccessMethodException e) {
             fail(e.getMessage());
         }
 
@@ -115,7 +116,7 @@ public class StringKatasTest extends TestifierTest {
         String result = null;
         try {
             result = (String) Invoker.invokeStatic(StringKatas.class, "nTwice", str, n);
-        } catch (CannotFindMethodException | CannotAccessMethodException e) {
+        } catch (CannotInvokeMethodException | CannotFindMethodException | CannotAccessMethodException e) {
             fail(e.getMessage());
         }
 
