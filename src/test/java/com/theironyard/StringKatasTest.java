@@ -26,7 +26,7 @@ public class StringKatasTest extends TestifierTest {
         String result = null;
         try {
             result = (String) Invoker.invokeStatic(StringKatas.class, "helloName", name);
-        } catch (CannotInvokeMethodException | CannotFindMethodException | CannotAccessMethodException e) {
+        } catch (Throwable e) {
             fail(e.getMessage());
         }
 
@@ -59,7 +59,7 @@ public class StringKatasTest extends TestifierTest {
         String result = null;
         try {
             result = (String) Invoker.invokeStatic(StringKatas.class, "makeOutWord", out, word);
-        } catch (CannotInvokeMethodException | CannotFindMethodException | CannotAccessMethodException e) {
+        } catch (Throwable e) {
             fail(e.getMessage());
         }
 
@@ -87,7 +87,7 @@ public class StringKatasTest extends TestifierTest {
         String result = null;
         try {
             result = (String) Invoker.invokeStatic(StringKatas.class, "firstHalf", str);
-        } catch (CannotInvokeMethodException | CannotFindMethodException | CannotAccessMethodException e) {
+        } catch (Throwable e) {
             fail(e.getMessage());
         }
 
@@ -116,7 +116,7 @@ public class StringKatasTest extends TestifierTest {
         String result = null;
         try {
             result = (String) Invoker.invokeStatic(StringKatas.class, "nTwice", str, n);
-        } catch (CannotInvokeMethodException | CannotFindMethodException | CannotAccessMethodException e) {
+        } catch (Throwable e) {
             fail(e.getMessage());
         }
 
